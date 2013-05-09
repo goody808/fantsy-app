@@ -4,16 +4,23 @@ describe "StaticPages" do
   
   describe "Home page" do
     it "should have content Fantasy Chatter" do
-    	visit '/static_pages/home'
+    	visit root_path
       page.should	have_content('Fantasy Chatter')
     end
   end
 
   describe "About Us" do
     it "should have content About Us" do
-    	visit '/static_pages/about'
+    	visit about_path
       page.should	have_content('About Us')
     end
+  end
+  
+  describe "Contact Page" do
+    it "should have content Contact" do
+      visit contact_path
+      page.should have_content('Contact')
+    end 
   end
 
 end
